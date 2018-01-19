@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.gab.beapixel">
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="3dip"/>
+</shape>
+    <!--
+    <fade xmlns:android="http://schemas.android.com/apk/res/android">
+        <targets>
+            <target android:excludeId="@android:id/statusBarBackground"/>
+            <target android:excludeId="@android:id/navigationBarBackground"/>
+        </targets>
+    </fade>
+    -->
+    <permission
+        android:name="android.permission.RECORD_AUDIO"
+        android:protectionLevel="signature" />
+    <!--
+    android:name="com.example.gab.beapixel.permission.C2D_MESSAGE"
+    android:name="android.permission.RECORD_AUDIO"
+    -->
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"/> -->
+    <!-- Huawei -->
+    <!--
+<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logoproj"
+        android:label="Be a Pixel"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="android:icon,android:theme"
+        android:largeHeap="true">
+
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar" -->
+
+        <activity android:name="example.gab.beapixel.Home">
+
+            <!-- android:windowSoftInputMode="" -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="example.gab.beapixel.ActivityRun"/>
+        <activity
+            android:name="example.gab.beapixel.MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+
+    </application>
+
+</manifest>
